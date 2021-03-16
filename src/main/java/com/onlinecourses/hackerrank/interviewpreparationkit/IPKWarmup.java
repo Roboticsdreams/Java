@@ -3,7 +3,7 @@ package com.onlinecourses.hackerrank.interviewpreparationkit;
 import java.util.HashMap;
 import java.util.Stack;
 
-public class Warmup {
+public class IPKWarmup {
 	public int sockMerchant(int n, int[] ar) {
 		int result = 0;
 		Integer hashvalue = 0;
@@ -15,7 +15,9 @@ public class Warmup {
 					hashvalue = 0;
 				} else {
 					hashvalue = hm.get(ar[i]);
-					hm.put(new Integer(ar[i]), new Integer(hashvalue + 1));
+					Integer intkey = Integer.valueOf(ar[i]);
+					Integer intval = Integer.valueOf(hashvalue + 1);
+					hm.put(intkey, intval);
 				}
 				if ((hashvalue + 1) % 2 == 0) {
 					result++;

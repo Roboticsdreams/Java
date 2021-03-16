@@ -17,6 +17,7 @@ public class TechWeekChallengeMain_Test {
 		assertEquals(result, output);
 	}
 
+	@Test
 	public void sentenceReverseTest() {
 		String input = "Man bites dog";
 		String result = techMain.sentenceReverse(input);

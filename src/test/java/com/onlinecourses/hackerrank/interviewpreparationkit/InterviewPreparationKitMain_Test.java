@@ -37,7 +37,7 @@ public class InterviewPreparationKitMain_Test {
 
 	@Test
 	public void test() {
-		Warmup warmupMock = mock(Warmup.class);
+		IPKWarmup warmupMock = mock(IPKWarmup.class);
 		when(warmupMock.sockMerchant(anyInt(), Mockito.any(int[].class))).thenReturn(3);
 		when(warmupMock.countingValleys(anyInt(), anyString())).thenReturn(1);
 		when(warmupMock.jumpingOnClouds(any())).thenReturn(1);

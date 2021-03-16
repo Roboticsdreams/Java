@@ -2,8 +2,6 @@ package com.onlinecourses.codingbat;
 
 import java.io.PrintStream;
 
-import com.onlinecourses.codingbat.Warmup;
-
 public class CodingBatMain {
 
 	PrintStream out = System.out;

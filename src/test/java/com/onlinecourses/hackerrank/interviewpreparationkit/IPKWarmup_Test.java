@@ -3,10 +3,10 @@ package com.onlinecourses.hackerrank.interviewpreparationkit;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import com.onlinecourses.hackerrank.interviewpreparationkit.Warmup;
+import com.onlinecourses.hackerrank.interviewpreparationkit.IPKWarmup;
 
 public class IPKWarmup_Test {
-	Warmup wm = new Warmup();
+	IPKWarmup wm = new IPKWarmup();
 
 	@Test
 	public void sockMerchant_TestCase01() {

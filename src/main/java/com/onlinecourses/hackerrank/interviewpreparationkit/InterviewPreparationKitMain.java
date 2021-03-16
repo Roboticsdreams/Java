@@ -5,7 +5,7 @@ import java.io.PrintStream;
 public class InterviewPreparationKitMain {
 
 	PrintStream out = System.out;
-	Warmup warmup = new Warmup();
+	IPKWarmup warmup = new IPKWarmup();
 	public void main() {		
 		System.out.println("Sock Merchant ="+warmup.sockMerchant(9, new int[] { 10, 20, 20, 10, 10, 30, 50, 10, 20 }));
 		System.out.println("Counting Valleys =" + warmup.countingValleys(8, "UDDDUDUU"));
