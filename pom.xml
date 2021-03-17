@@ -9,6 +9,9 @@
 	<name>Java</name>
 	<description>JavaWorkouts</description>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<jacoco.version>0.7.5.201505241946</jacoco.version>
 		<junit.version>4.13.1</junit.version>
 		<mockito.version>1.10.19</mockito.version>
@@ -31,32 +34,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.21.0</version>
-				<configuration>
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-					<argLine>-Dfile.encoding=UTF-8</argLine>
-					<useSystemClassLoader>false</useSystemClassLoader>
-					<forkCount>1</forkCount>
-					<reuseForks>true</reuseForks>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
-				<configuration>
-					<skipMain>true</skipMain>
-					<skip>true</skip>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.2</version>
 				<executions>
 					<execution>
 						<id>jacoco-initialize</id>
@@ -66,7 +45,7 @@
 					</execution>
 					<execution>
 						<id>jacoco-site</id>
-						<phase>package</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
