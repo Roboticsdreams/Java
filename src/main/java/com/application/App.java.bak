@@ -6,7 +6,6 @@ import com.onlinecourses.OnlineCoursesMain;
 
 public class App {
 
-	/*main method*/
 	public static void main(String[] args) {
 		
 		CodeChallengesMain codechallenges = new CodeChallengesMain();
