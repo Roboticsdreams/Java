@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LongestUniqueSubString.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.interviewquest.freshworks</a> &gt; <span class="el_source">LongestUniqueSubString.java</span></div><h1>LongestUniqueSubString.java</h1><pre class="source lang-java linenums">package com.rdreams.interviewquest.freshworks;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/*
+Given a string s, find the length of the longest substring without repeating characters.
+Example 1:
+Input: s = &quot;abcabcbb&quot;
+Output: 3
+Explanation: The answer is &quot;abc&quot;, with the length of 3.
+
+Example 2:
+Input: s = &quot;bbbbb&quot;
+Output: 1
+Explanation: The answer is &quot;b&quot;, with the length of 1.
+
+Example 3:
+Input: s = &quot;pwwkew&quot;
+Output: 3
+Explanation: The answer is &quot;wke&quot;, with the length of 3.
+
+Notice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
+*/
+
+<span class="fc" id="L26">public class LongestUniqueSubString {</span>
+    public int getMaxUniqueSubStr(String inputString) {
+<span class="fc" id="L28">        Map&lt;Character,Integer&gt; map = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L29">        char[] chars = inputString.toCharArray();</span>
+<span class="fc" id="L30">        int res = 0;</span>
+<span class="fc" id="L31">        int start = 0;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for(int i=0; i&lt;chars.length;i++){</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (map.getOrDefault(chars[i],-1) == -1) {</span>
+<span class="fc" id="L34">                map.put(chars[i],i);</span>
+            }
+            else {
+<span class="fc" id="L37">                start = map.getOrDefault(chars[i],-1)+1;</span>
+<span class="fc" id="L38">                map.put(chars[i],i);</span>
+            }
+<span class="fc" id="L40">            res = Math.max(res, (i-start+1));</span>
+        }
+<span class="fc" id="L42">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

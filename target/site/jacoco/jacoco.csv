@@ -1,0 +1,3 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Java,com.rdreams.onlinecourses.codingninjas.basicsofjava.basic_io,AreaofRectangle,0,7,0,0,0,2,0,2,0,2
+Java,com.rdreams.interviewquest.freshworks,LongestUniqueSubString,0,76,0,4,0,12,0,4,0,2
