@@ -7,9 +7,9 @@ Java Workouts
 ## Steps to download and execute this project
 
 - Download and Install [Java](https://www.oracle.com/in/java/technologies/downloads/)
-- Download the [Protable Apache-Maven](https://maven.apache.org/download.cgi), Extract and Place it some path like C:\PortableApps\apache-maven-3.6.3
-- Set Environment variable for JAVA_HOME is C:\Program Files\Java\jdk-17.0.3.1
-- Set Environment variable for MAVEN_HOME is C:\PortableApps\apache-maven-3.6.3
+- Download the [Protable Apache-Maven](https://maven.apache.org/download.cgi), Extract and Place it some path like C:\PortableApps\apache-maven-3.9.6
+- Set Environment variable for JAVA_HOME is C:\Program Files\Java\jdk-21
+- Set Environment variable for MAVEN_HOME is C:\PortableApps\apache-maven-3.9.6
 - Download the [Java](https://github.com/Roboticsdreams/Java.git)
 - Unzip the zip file.
 - Update the pom.xml with your java version
