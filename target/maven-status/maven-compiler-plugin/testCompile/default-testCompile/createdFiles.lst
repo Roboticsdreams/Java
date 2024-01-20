@@ -1,3 +1,5 @@
+com\rdreams\suites\AppTestSuite.class
+com\rdreams\interviewquest\amazon\MaxPairsTest.class
 com\rdreams\interviewquest\freshworks\LongestUniqueSubstringTest.class
 com\rdreams\onlinecourses\codingninjas\basicsofjava\basic_io\AreaofRectangleTest.class
-com\rdreams\suites\AppTestSuite.class
+com\rdreams\interviewquest\amazon\ReviewScoreTest.class

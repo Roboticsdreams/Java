@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReviewScore.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.interviewquest.amazon</a> &gt; <span class="el_source">ReviewScore.java</span></div><h1>ReviewScore.java</h1><pre class="source lang-java linenums">package com.rdreams.interviewquest.amazon;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+/*
+Suppose that Amazon has marked n strings that are prohibited in reviews. 
+They assign a score to each review that denotes how well it follows the guidelines. 
+The score of a review is defined as the longest contiguous substring of the review which does not contain any string among the list of n prohibited strings. A string contains a prohibited word if it has a contiguous substring that matches a word from the prohibited list, ignoring the case.
+Given a review and a list of prohibited strings, calculate the review score.
+
+Example:
+
+review = &quot;GoodProductButScrapAfterWash&quot;
+prohibitedWords = ['crap&quot;, &quot;odpro&quot;]
+
+Some of the substrings that do not contain a prohibited word are:
+• ProductBut
+• rapAfterWash
+• dProductButScu
+• Wash
+
+The longest substring is &quot;dProductButScra&quot;, return its length, 15.
+*/
+
+<span class="fc" id="L32">public class ReviewScore {</span>
+
+    public int findReviewScore(String review, List&lt;String&gt; prohibitedWords) {
+<span class="fc" id="L35">        int max = 0;</span>
+<span class="fc" id="L36">        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for(int i=0; i&lt;review.length();i++) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            for(int j = i+1; j&lt;= review.length(); j++) {</span>
+<span class="fc" id="L39">                String str = review.substring(i,j).toLowerCase();</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">                if(map.getOrDefault(str, null) == null){</span>
+<span class="fc" id="L41">                    map.put(str, str.length());</span>
+                }
+            }
+        }
+<span class="fc" id="L45">        List&lt;Map.Entry&lt;String, Integer&gt;&gt; nlist = new ArrayList&lt;&gt;(map.entrySet());</span>
+<span class="fc" id="L46">        nlist.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));</span>
+
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        for(Entry&lt;String, Integer&gt; s: nlist) {</span>
+<span class="fc" id="L49">            String key = s.getKey();</span>
+<span class="fc" id="L50">            int len = key.length();</span>
+<span class="fc" id="L51">            boolean flag = false;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            for(String pw: prohibitedWords) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                if(key.indexOf(pw.toLowerCase()) != -1) {</span>
+<span class="fc" id="L54">                    flag = true;</span>
+<span class="fc" id="L55">                    break;</span>
+                }
+<span class="fc" id="L57">            }</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">            if(!flag) {</span>
+<span class="fc" id="L59">                max = len;</span>
+<span class="fc" id="L60">                break;</span>
+            }
+<span class="fc" id="L62">        }</span>
+<span class="fc" id="L63">        return max;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
