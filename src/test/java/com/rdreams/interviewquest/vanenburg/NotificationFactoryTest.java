@@ -22,15 +22,32 @@ public class NotificationFactoryTest {
         String expectedOutput = "Email Notification";
         assertEquals(expectedOutput, actualOutput);
     }
-
     @Test
     public void Notification_TestCase03() {
 
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             Notification notification = obj.createNotification("other");
             notification.sendNotification();
-        }, "unknown");
+        });
 
-        assertEquals("unknown", thrown.getMessage());
+        assertEquals("IllegalArgumentException", thrown.getMessage());
+    }
+
+    @Test
+    public void Notification_TestCase04() {
+        NullPointerException thrown = assertThrows(NullPointerException.class, () -> {
+            Notification notification = obj.createNotification(null);
+            notification.sendNotification();
+        });
+        assertEquals("NullPointerException", thrown.getMessage());
+    }
+
+    @Test
+    public void Notification_TestCase05() {
+        NullPointerException thrown = assertThrows(NullPointerException.class, () -> {
+            Notification notification = obj.createNotification("");
+            notification.sendNotification();
+        });
+        assertEquals("NullPointerException", thrown.getMessage());
     }
 }

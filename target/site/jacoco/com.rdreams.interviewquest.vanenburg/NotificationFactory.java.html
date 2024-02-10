@@ -10,8 +10,8 @@ Let’s try to implement this with the help of the factory method design pattern
  */
 <span class="fc" id="L11">public class NotificationFactory {</span>
     public Notification createNotification(String str) {
-<span class="pc bpc" id="L13" title="2 of 4 branches missed.">        if (str == null || str.isEmpty()) {</span>
-<span class="nc" id="L14">            return null;</span>
+<span class="fc bfc" id="L13" title="All 4 branches covered.">        if (str == null || str.isEmpty()) {</span>
+<span class="fc" id="L14">            throw new NullPointerException(&quot;NullPointerException&quot;);</span>
         }
 <span class="fc bfc" id="L16" title="All 3 branches covered.">        switch (str) {</span>
             case &quot;SMS&quot;:
@@ -21,7 +21,7 @@ Let’s try to implement this with the help of the factory method design pattern
 <span class="fc" id="L21">                return  new EmailNotification();</span>
 
             default:
-<span class="fc" id="L24">                throw new IllegalArgumentException(&quot;unknown&quot;);</span>
+<span class="fc" id="L24">                throw new IllegalArgumentException(&quot;IllegalArgumentException&quot;);</span>
         }
     }
 }

@@ -15,4 +15,14 @@ public class FLAMESTest {
         String expectedOutput = "F";
         assertEquals(expectedOutput, actualOutput);
     }
+
+
+    @Test
+    public void getFlames_TestCase02() {
+        String s1 = "mrsjohnson";
+        String s2 = "johnson";
+        String actualOutput = obj.getFLAMES(s1,s2);
+        String expectedOutput = "E";
+        assertEquals(expectedOutput, actualOutput);
+    }
 }

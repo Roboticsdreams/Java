@@ -57,11 +57,4 @@ public class FLAMES {
         }
         return list;
     }
-
-    public static void main(String[] args) {
-        String s1 = "raja";
-        String s2 = "rani";
-        FLAMES f = new FLAMES();
-        System.out.println(f.getFLAMES(s1,s2));
-    }
 }

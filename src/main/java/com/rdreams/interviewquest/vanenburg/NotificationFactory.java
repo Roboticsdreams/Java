@@ -11,7 +11,7 @@ Let’s try to implement this with the help of the factory method design pattern
 public class NotificationFactory {
     public Notification createNotification(String str) {
         if (str == null || str.isEmpty()) {
-            return null;
+            throw new NullPointerException("NullPointerException");
         }
         switch (str) {
             case "SMS":
@@ -21,7 +21,7 @@ public class NotificationFactory {
                 return  new EmailNotification();
 
             default:
-                throw new IllegalArgumentException("unknown");
+                throw new IllegalArgumentException("IllegalArgumentException");
         }
     }
 }
