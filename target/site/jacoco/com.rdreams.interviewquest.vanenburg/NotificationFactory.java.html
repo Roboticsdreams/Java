@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NotificationFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.interviewquest.vanenburg</a> &gt; <span class="el_source">NotificationFactory.java</span></div><h1>NotificationFactory.java</h1><pre class="source lang-java linenums">package com.rdreams.interviewquest.vanenburg;
+
+import com.rdreams.interviewquest.vanenburg.factorydesignpattern.EmailNotification;
+import com.rdreams.interviewquest.vanenburg.factorydesignpattern.Notification;
+import com.rdreams.interviewquest.vanenburg.factorydesignpattern.SMSNotificaition;
+
+/*
+Consider we want to implement a notification service through email and SMS notifications.
+Let’s try to implement this with the help of the factory method design pattern
+ */
+<span class="fc" id="L11">public class NotificationFactory {</span>
+    public Notification createNotification(String str) {
+<span class="pc bpc" id="L13" title="2 of 4 branches missed.">        if (str == null || str.isEmpty()) {</span>
+<span class="nc" id="L14">            return null;</span>
+        }
+<span class="fc bfc" id="L16" title="All 3 branches covered.">        switch (str) {</span>
+            case &quot;SMS&quot;:
+<span class="fc" id="L18">                return  new SMSNotificaition();</span>
+
+            case &quot;Email&quot;:
+<span class="fc" id="L21">                return  new EmailNotification();</span>
+
+            default:
+<span class="fc" id="L24">                throw new IllegalArgumentException(&quot;unknown&quot;);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

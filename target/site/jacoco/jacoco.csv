@@ -2,9 +2,15 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 Java,com.rdreams.interviewquest.zemoso,FibnoacciSeries,0,51,0,0,0,6,0,4,0,4
 Java,com.rdreams.interviewquest.zemoso,AnagramSets,0,89,0,8,0,21,0,6,0,2
 Java,com.rdreams.interviewquest.zemoso,sortListOfStrings,0,51,0,2,0,10,0,4,0,3
+Java,com.rdreams.interviewprep.freshworks,FLAMES,15,164,2,16,5,39,3,10,1,3
 Java,com.rdreams.onlinecourses.codingninjas.basicsofjava.controlstatements,EvenSumTillN,0,18,0,2,0,5,0,3,0,2
+Java,com.rdreams.interviewquest.vanenburg,SecondLargestNumber,0,46,0,10,0,12,0,7,0,2
+Java,com.rdreams.interviewquest.vanenburg,NotificationFactory,2,29,2,5,1,6,2,4,0,2
+Java,com.rdreams.interviewquest.vanenburg,FindNumbers,0,105,0,8,0,20,0,8,0,4
 Java,com.rdreams.interviewquest.amazon,MaxPairs,0,57,0,6,0,14,0,5,0,2
 Java,com.rdreams.interviewquest.amazon,ReviewScore,0,102,0,14,0,24,0,9,0,2
-Java,com.rdreams.interviewprep.vanenburg,MissingNumber,0,61,0,6,0,14,0,6,0,3
+Java,com.rdreams.interviewprep.vanenburg,CountCharFrequency,0,59,0,8,0,11,0,6,0,2
+Java,com.rdreams.interviewquest.vanenburg.factorydesignpattern,SMSNotificaition,0,5,0,0,0,2,0,2,0,2
+Java,com.rdreams.interviewquest.vanenburg.factorydesignpattern,EmailNotification,0,5,0,0,0,2,0,2,0,2
 Java,com.rdreams.onlinecourses.codingninjas.basicsofjava.basic_io,AreaofRectangle,0,7,0,0,0,2,0,2,0,2
 Java,com.rdreams.interviewquest.freshworks,LongestUniqueSubString,0,76,0,4,0,12,0,4,0,2
