@@ -16,4 +16,14 @@ public class LinearSearchTest {
         int expectedOutput = 3;
         assertEquals(actualOutput,expectedOutput);
     }
+
+    @Test
+    public void  getIndexFromLinearSearch_TestCase02() {
+        int[] arr = new int[] {6,7,8,4,1};
+        int n = arr.length;
+        int num = 9;
+        int actualOutput = obj.getIndexFromLinearSearch(arr,num,n);
+        int expectedOutput = -1;
+        assertEquals(actualOutput,expectedOutput);
+    }
 }
