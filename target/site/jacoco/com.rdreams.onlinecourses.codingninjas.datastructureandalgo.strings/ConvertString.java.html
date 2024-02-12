@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConvertString.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.onlinecourses.codingninjas.datastructureandalgo.strings</a> &gt; <span class="el_source">ConvertString.java</span></div><h1>ConvertString.java</h1><pre class="source lang-java linenums">package com.rdreams.onlinecourses.codingninjas.datastructureandalgo.strings;
+
+/*
+You are given a string 'STR'. You have to convert the first alphabet of each word in a string to UPPER CASE.
+
+For example:
+If the given string 'STR' = ”I am a student of the third year”
+so you have to transform this string to ”I Am A Student Of The Third Year&quot;
+ */
+<span class="fc" id="L10">public class ConvertString {</span>
+    public String convertString(String str) {
+<span class="fc" id="L12">        StringBuilder s = new StringBuilder(str);</span>
+<span class="fc" id="L13">        s.setCharAt(0, Character.toUpperCase(s.charAt(0)));</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        for(int i=1; i&lt;str.length();i++) {</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">            if(s.charAt(i-1)==' '){</span>
+<span class="fc" id="L16">                s.setCharAt(i,Character.toUpperCase(s.charAt(i)));</span>
+            }
+        }
+<span class="fc" id="L19">        return s.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
