@@ -15,4 +15,9 @@ Java,com.rdreams.onlinecourses.codingninjas.datastructureandalgo.strings,Convert
 Java,com.rdreams.interviewquest.vanenburg.factorydesignpattern,SMSNotificaition,0,5,0,0,0,2,0,2,0,2
 Java,com.rdreams.interviewquest.vanenburg.factorydesignpattern,EmailNotification,0,5,0,0,0,2,0,2,0,2
 Java,com.rdreams.onlinecourses.codingninjas.basicsofjava.basic_io,AreaofRectangle,0,7,0,0,0,2,0,2,0,2
+Java,com.rdreams.onlinecourses.codedecode.commonquestions.compareobjects,Address,0,18,0,0,0,6,0,3,0,3
+Java,com.rdreams.onlinecourses.codedecode.commonquestions.compareobjects,AddressComparator,0,9,0,0,0,2,0,2,0,2
+Java,com.rdreams.onlinecourses.codedecode.commonquestions.compareobjects,NameComparator,0,9,0,0,0,2,0,2,0,2
+Java,com.rdreams.onlinecourses.codedecode.commonquestions.compareobjects,Employee,0,24,0,0,0,9,0,4,0,4
+Java,com.rdreams.onlinecourses.codedecode.commonquestions.compareobjects,AgeComparator,0,9,0,0,0,2,0,2,0,2
 Java,com.rdreams.interviewquest.freshworks,LongestUniqueSubString,0,76,0,4,0,12,0,4,0,2
