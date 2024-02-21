@@ -54,7 +54,6 @@ public class IPKWarmupTest {
 
     @Test
     public void countingValleys_TestCase01() {
-        int n = 2;
         String str = "UB";
         int actualOutput = wm.countingValleys(str);
         int expectedOutput = 0;
@@ -63,7 +62,6 @@ public class IPKWarmupTest {
 
     @Test
     public void countingValleys_TestCase02() {
-        int n = 8;
         String str = "UDUDUD";
         int actualOutput = wm.countingValleys(str);
         int expectedOutput = 0;
@@ -72,7 +70,6 @@ public class IPKWarmupTest {
 
     @Test
     public void countingValleys_TestCase03() {
-        int n = 8;
         String str = "UUUUDDDD";
         int actualOutput = wm.countingValleys(str);
         int expectedOutput = 0;
@@ -81,7 +78,6 @@ public class IPKWarmupTest {
 
     @Test
     public void countingValleys_TestCase04() {
-        int n = 8;
         String str = "UDDDUDUUU";
         int actualOutput = wm.countingValleys(str);
         int expectedOutput = 1;
@@ -90,7 +86,6 @@ public class IPKWarmupTest {
 
     @Test
     public void countingValleys_TestCase05() {
-        int n = 12;
         String str = "DDUUDDUDUUUD";
         int actualOutput = wm.countingValleys(str);
         int expectedOutput = 2;
