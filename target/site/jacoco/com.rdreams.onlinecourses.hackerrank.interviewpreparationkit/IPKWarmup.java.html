@@ -6,17 +6,17 @@ import java.util.Stack;
 <span class="fc" id="L6">public class IPKWarmup {</span>
     public int sockMerchant(int n, int[] ar) {
 <span class="fc" id="L8">        int result = 0;</span>
-<span class="fc" id="L9">        Integer hashvalue = 0;</span>
+        Integer hashvalue;
 <span class="fc bfc" id="L10" title="All 4 branches covered.">        if (n &gt; 1 &amp;&amp; n &lt;= 100) {</span>
-<span class="fc" id="L11">            HashMap&lt;Integer, Integer&gt; hm = new HashMap&lt;Integer, Integer&gt;();</span>
+<span class="fc" id="L11">            HashMap&lt;Integer, Integer&gt; hm = new HashMap&lt;&gt;();</span>
 <span class="fc bfc" id="L12" title="All 2 branches covered.">            for (int i = 0; i &lt; n; i++) {</span>
 <span class="fc bfc" id="L13" title="All 2 branches covered.">                if (!hm.containsKey(ar[i])) {</span>
 <span class="fc" id="L14">                    hm.put(ar[i], 1);</span>
 <span class="fc" id="L15">                    hashvalue = 0;</span>
                 } else {
 <span class="fc" id="L17">                    hashvalue = hm.get(ar[i]);</span>
-<span class="fc" id="L18">                    Integer intkey = Integer.valueOf(ar[i]);</span>
-<span class="fc" id="L19">                    Integer intval = Integer.valueOf(hashvalue + 1);</span>
+<span class="fc" id="L18">                    Integer intkey = ar[i];</span>
+<span class="fc" id="L19">                    Integer intval = hashvalue + 1;</span>
 <span class="fc" id="L20">                    hm.put(intkey, intval);</span>
                 }
 <span class="fc bfc" id="L22" title="All 2 branches covered.">                if ((hashvalue + 1) % 2 == 0) {</span>
@@ -27,9 +27,9 @@ import java.util.Stack;
 <span class="fc" id="L27">        return result;</span>
     }
 
-    public int countingValleys(int n, String s) {
+    public int countingValleys(String s) {
 <span class="fc" id="L31">        int result = 0;</span>
-<span class="fc" id="L32">        Stack&lt;Character&gt; stack = new Stack&lt;Character&gt;();</span>
+<span class="fc" id="L32">        Stack&lt;Character&gt; stack = new Stack&lt;&gt;();</span>
 <span class="fc" id="L33">        char[] stringToCharArray = s.toCharArray();</span>
 <span class="fc bfc" id="L34" title="All 2 branches covered.">        for (char ar : stringToCharArray) {</span>
 <span class="fc bfc" id="L35" title="All 2 branches covered.">            if (stack.isEmpty()) {</span>
@@ -58,7 +58,7 @@ import java.util.Stack;
     }
 
     public long repeatedString(String s, long n) {
-<span class="fc" id="L61">        long result = 0;</span>
+        long result;
 <span class="fc" id="L62">        int divisor = s.length();</span>
 <span class="fc" id="L63">        long quotient = n / divisor;</span>
 <span class="fc" id="L64">        long remainder = n % divisor;</span>

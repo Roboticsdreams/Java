@@ -18,8 +18,8 @@ consider this scenario and write your code accordingly.
 <span class="fc" id="L18">            Map&lt;String, Integer&gt; map = getMap(file1);</span>
 <span class="fc" id="L19">            String[] file2str = file2.split(&quot; &quot;);</span>
 <span class="fc bfc" id="L20" title="All 2 branches covered.">            for (String s: file2str) {</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">                if (map.getOrDefault(s, -1) == -1) {</span>
-<span class="fc" id="L22">                    return  false;</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">                if (map.getOrDefault(s, -1) == -1) {</span>
+<span class="nc" id="L22">                    return  false;</span>
                 }
                 else {
 <span class="fc" id="L25">                    int count = map.get(s);</span>
@@ -31,25 +31,22 @@ consider this scenario and write your code accordingly.
                     }
                 }
             }
-<span class="fc bfc" id="L34" title="All 2 branches covered.">            if (map.isEmpty()) {</span>
-<span class="fc" id="L35">                return true;</span>
-            }
+<span class="fc" id="L34">            return map.isEmpty();</span>
         }
-<span class="fc" id="L38">        return false;</span>
     }
 
     public Map&lt;String, Integer&gt; getMap(String file) {
-<span class="fc" id="L42">        String[] str = file.split(&quot; &quot;);</span>
-<span class="fc" id="L43">        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span>
-<span class="fc bfc" id="L44" title="All 2 branches covered.">        for (String s: str) {</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">            if (map.getOrDefault(s, -1) == -1) {</span>
-<span class="fc" id="L46">                map.put(s,1);</span>
+<span class="fc" id="L39">        String[] str = file.split(&quot; &quot;);</span>
+<span class="fc" id="L40">        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        for (String s: str) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">            if (map.getOrDefault(s, -1) == -1) {</span>
+<span class="fc" id="L43">                map.put(s,1);</span>
             }
             else {
-<span class="fc" id="L49">                map.put(s,map.getOrDefault(s,-1)+1);</span>
+<span class="fc" id="L46">                map.put(s,map.getOrDefault(s,-1)+1);</span>
             }
         }
-<span class="fc" id="L52">        return map;</span>
+<span class="fc" id="L49">        return map;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
