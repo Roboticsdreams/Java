@@ -42,4 +42,13 @@ public class MatchFileTest {
         boolean expectedOutput = false;
         assertEquals(actualOutput,expectedOutput);
     }
+
+    @Test
+    public void  isFileMatch_TestCase05() {
+        String s1 = "Hai, hello this test file";
+        String s2 = "Hai, hello this not test file";
+        boolean actualOutput = obj.isFileMatch(s1,s2);
+        boolean expectedOutput = false;
+        assertEquals(actualOutput,expectedOutput);
+    }
 }
