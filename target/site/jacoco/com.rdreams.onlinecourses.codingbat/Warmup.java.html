@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Warmup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.onlinecourses.codingbat</a> &gt; <span class="el_source">Warmup.java</span></div><h1>Warmup.java</h1><pre class="source lang-java linenums">package com.rdreams.onlinecourses.codingbat;
+
+
+<span class="fc" id="L4">public class Warmup {</span>
+    // The parameter weekday is true if it is a weekday, and the parameter vacation
+    // is true if we are on vacation.
+    // We sleep in if it is not a weekday or we're on vacation. Return true if we
+    // sleep in.
+    public boolean sleepIn(boolean weekday, boolean vacation) {
+<span class="fc bfc" id="L10" title="All 4 branches covered.">        return (!weekday || vacation);</span>
+    }
+
+    // We have two monkeys, a and b, and the parameters aSmile and bSmile indicate
+    // if each is smiling.
+    // We are in trouble if they are both smiling or if neither of them is smiling.
+    // Return true if we are in trouble.
+    public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        return (aSmile == bSmile);</span>
+    }
+
+    // Given two int values, return their sum.
+    // Unless the two values are the same, then return double their sum.
+    public int sumDouble(int a, int b) {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        return (a == b) ? (a + b) * 2 : (a + b);</span>
+    }
+
+    // Given an int n, return the absolute difference between n and 21,
+    // except return double the absolute difference if n is over 21.
+    public int diff21(int n) {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        return (n &gt; 21) ? (n - 21) * 2 : (21 - n);</span>
+    }
+
+    // Given 2 positive int values, return the larger value that is in the range
+    // 10..20
+    // inclusive, or return 0 if neither is in that range.
+    public int max1020(int a, int b) {
+<span class="fc" id="L37">        int result = 0;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (b &gt; a) {</span>
+<span class="fc" id="L39">            int temp = a;</span>
+<span class="fc" id="L40">            a = b;</span>
+<span class="fc" id="L41">            b = temp;</span>
+        }
+
+<span class="fc bfc" id="L44" title="All 4 branches covered.">        if (a &gt;=10 &amp;&amp; a &lt;= 20) {</span>
+<span class="fc" id="L45">            result = a;</span>
+        }
+<span class="fc bfc" id="L47" title="All 4 branches covered.">        else if (b &gt;= 10 &amp;&amp; b &lt;= 20) {</span>
+<span class="fc" id="L48">            result = b;</span>
+        }
+<span class="fc" id="L50">        return result;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

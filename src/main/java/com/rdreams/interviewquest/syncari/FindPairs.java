@@ -15,13 +15,13 @@ public class FindPairs {
         Map<Integer, Integer> map = new HashMap<>();
         for (Integer i : elements) {
             int key = target - i;
-            if (map.getOrDefault(key, -1) == -1) {
-                map.put(i,key);
-            }
-            else {
+            if (map.getOrDefault(key, -1) != -1) {
                 result.add(key);
                 result.add(i);
-                map.remove(i);
+                map.remove(key);
+            }
+            else {
+                map.put(i,1);
             }
         }
         return  result;
