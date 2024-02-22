@@ -5,6 +5,7 @@ com\rdreams\onlinecourses\codedecode\commonquestions\compareobjects\Address.clas
 com\rdreams\onlinecourses\codedecode\commonquestions\compareobjects\Employee.class
 com\rdreams\interviewquest\zemoso\FibnoacciSeries.class
 com\rdreams\onlinecourses\codingninjas\basicsofjava\basic_io\AreaofRectangle.class
+com\rdreams\onlinecourses\codingbat\Warmup.class
 com\rdreams\interviewquest\athenahealth\freshers\ArraySum.class
 com\rdreams\interviewquest\crayondata\MatchFile.class
 com\rdreams\onlinecourses\codedecode\commonquestions\compareobjects\AgeComparator.class
@@ -18,12 +19,15 @@ com\rdreams\interviewquest\vanenburg\SecondLargestNumber.class
 com\rdreams\onlinecourses\codingninjas\datastructureandalgo\arrays\LinearSearch.class
 com\rdreams\interviewquest\vanenburg\FindNumbers.class
 com\rdreams\interviewquest\zemoso\AnagramSets.class
+com\rdreams\interviewprep\Groww\MinimumPlatform.class
 com\rdreams\interviewprep\vanenburg\CountCharFrequency.class
 com\rdreams\interviewquest\athenahealth\freshers\UniqueElements.class
 com\rdreams\interviewquest\syncari\FindPairs.class
 com\rdreams\interviewquest\amazon\MaxPairs.class
 com\rdreams\interviewquest\vanenburg\factorydesignpattern\EmailNotification.class
 com\rdreams\interviewprep\freshworks\FLAMES.class
+com\rdreams\onlinecourses\hackerrank\interviewpreparationkit\IPKWarmup.class
 com\rdreams\onlinecourses\codedecode\commonquestions\compareobjects\NameComparator.class
+com\rdreams\interviewquest\micro1\BestTimetoBuyandSell.class
 com\rdreams\interviewquest\vanenburg\factorydesignpattern\Notification.class
 com\rdreams\interviewquest\vanenburg\NotificationFactory.class

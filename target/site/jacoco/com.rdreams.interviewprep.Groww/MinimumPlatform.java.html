@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MinimumPlatform.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java</a> &gt; <a href="index.source.html" class="el_package">com.rdreams.interviewprep.Groww</a> &gt; <span class="el_source">MinimumPlatform.java</span></div><h1>MinimumPlatform.java</h1><pre class="source lang-java linenums">package com.rdreams.interviewprep.Groww;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+Minimum Number of Platforms Required for a Railway/Bus Station
+
+Given the arrival and departure times of all trains that reach a railway station,
+the task is to find the minimum number of platforms required for the railway station
+so that no train waits. We are given two arrays that represent the arrival and
+departure times of trains that stop.
+
+Examples:
+Input: arr[] = {9:00, 9:40, 9:50, 11:00, 15:00, 18:00}, dep[] = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
+Output: 3
+Explanation: There are at-most three trains at a time (time between 9:40 to 12:00)
+
+Input: arr[] = {9:00, 9:40}, dep[] = {9:10, 12:00}
+Output: 1
+Explanation: Only one platform is needed.
+ */
+<span class="fc" id="L23">public class MinimumPlatform {</span>
+    public int calculateMinPatforms(int at[], int dt[]) {
+<span class="fc" id="L25">        int n = at.length;</span>
+<span class="fc" id="L26">        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L27">        int min = 0;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        for(int i =1; i&lt;n; i++) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            if (at[i] &lt; dt[i-1]) {</span>
+<span class="fc" id="L30">                list.add(dt[i-1]);</span>
+            }
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            for(int j=0; j&lt;list.size();j++) {</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">                if (at[i] &gt; list.get(j)) {</span>
+<span class="fc" id="L34">                    list.remove(j);</span>
+                }
+            }
+<span class="fc" id="L37">            min = Math.max(min, list.size());</span>
+        }
+<span class="fc" id="L39">        return min+1;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
