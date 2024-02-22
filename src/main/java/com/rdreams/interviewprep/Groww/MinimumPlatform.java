@@ -29,9 +29,9 @@ public class MinimumPlatform {
             if (at[i] < dt[i-1]) {
                 list.add(dt[i-1]);
             }
-            for(int j=0; j<list.size();j++) {
-                if (at[i] > list.get(j)) {
-                    list.remove(j);
+            for(Integer integer : new ArrayList<>(list)) {
+                if (at[i] > integer) {
+                    list.remove(integer);
                 }
             }
             min = Math.max(min, list.size());
