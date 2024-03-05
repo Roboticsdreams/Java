@@ -35,8 +35,8 @@ public class Student implements Comparable&lt;Student&gt; {
     public boolean equals(Object obj) {
 <span class="fc bfc" id="L36" title="All 2 branches covered.">        if (this == obj)</span>
 <span class="fc" id="L37">            return true;</span>
-<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (obj == null)</span>
-<span class="fc" id="L39">            return false;</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (obj == null)</span>
+<span class="nc" id="L39">            return false;</span>
 <span class="fc bfc" id="L40" title="All 2 branches covered.">        if (getClass() != obj.getClass())</span>
 <span class="fc" id="L41">            return false;</span>
 <span class="fc" id="L42">        Student other = (Student) obj;</span>
@@ -47,14 +47,12 @@ public class Student implements Comparable&lt;Student&gt; {
 <span class="fc" id="L47">            return false;</span>
 <span class="fc bfc" id="L48" title="All 2 branches covered.">        if (totalmarks != other.totalmarks)</span>
 <span class="fc" id="L49">            return false;</span>
-<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (rank != other.rank)</span>
-<span class="fc" id="L51">            return false;</span>
-<span class="fc" id="L52">        return true;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        return rank == other.rank;</span>
     }
 
     @Override
     public String toString() {
-<span class="fc" id="L57">        return &quot;Student [name=&quot; + name + &quot;, totalmarks=&quot; + totalmarks + &quot;, rank=&quot; + rank + &quot;]&quot;;</span>
+<span class="fc" id="L55">        return &quot;Student [name=&quot; + name + &quot;, totalmarks=&quot; + totalmarks + &quot;, rank=&quot; + rank + &quot;]&quot;;</span>
     }
 
 }
