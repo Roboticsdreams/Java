@@ -17,6 +17,8 @@ public class StudentTest {
     public void testEqualityWithNull() {
         Student obj = new Student();
         assertNotEquals(null, obj);
+        assertNotEquals(obj,null);
+
     }
 
     @Test
