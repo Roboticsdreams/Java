@@ -25,6 +25,7 @@ com\rdreams\interviewquest\amazon\ReviewScoreTest.class
 com\rdreams\onlinecourses\hackerrank\interviewpreparationkit\IPKWarmupTest.class
 com\rdreams\onlinecourses\codingninjas\basicsofjava\controlstatements\EvenSumTillNTest.class
 com\rdreams\interviewquest\vanenburg\SecondLargestNumberTest.class
+com\rdreams\interviewprep\m2pfintech\SearchElementTest.class
 com\rdreams\onlinecourses\codingninjas\basicsofjava\basic_io\AreaofRectangleTest.class
 com\rdreams\interviewquest\crayondata\MatchFileTest.class
 com\rdreams\interviewquest\zemoso\AnagramSetsTest.class
